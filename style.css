@@ -1,0 +1,121 @@
+*{
+    padding:0;
+    margin: 1px;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #76ABAE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#headimg{
+    height: 75%;
+    padding-left: 2%;
+}
+#headLine{
+    margin-left: 120px;
+    color: beige;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: bisque;
+    font-size: 250%;
+}
+.headSearch{
+    display:flex;
+    align-self:last baseline;
+    padding-right: 0.5%;
+    margin-bottom: 4px;
+}
+#headInput{
+    padding: 0%;
+    margin: 0%;
+    border-radius: 6px;
+}
+#headbutton{
+    padding-left: 0;
+    margin-left: 0;
+    border-radius: 2px solid black;
+    border-radius: 4px;
+}
+
+main{
+    padding-top: 10px;
+    text-align: center;
+    background-color: aquamarine;
+    height: 400px;
+}
+.mainSearch{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#mainSearchbox{
+    width: 50%;
+    height: 40px;
+    border-radius: 8px;
+}
+#mainSearchButton{
+    height: 44px;
+    width: 5%;
+    background-color: gold;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+footer{
+    background-color: #222831;
+    height: 60px;
+    color:white;
+}
+
+
+
+
+@media only screen and (max-width : 700px) {
+    #headLine{
+        font-size:large;
+    }
+    #headInput{
+        width:100px;
+    }
+    #HeadButton{
+        height: 25px;
+        width: 30px;
+    }
+    #headimg{
+        height: 50%;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width : 380px) {
+    header{
+        height: 70px;
+    }
+    #headLine{
+        font-size:100%;
+    }
+    #headInput{
+        width:80px;
+        border: none;
+        padding: 0;
+    }
+    #Headbutton{
+        height: 25px;
+        width: 30px;
+        border: none;
+        padding: 0;
+    }
+    #headimg{
+        height: 50%;
+        margin-right: 20px;
+    }
+    H1{
+        font-size: small;
+    }
+    #mainSearchbox{
+        width: 40%;
+        height: 10px;
+    }
+}
