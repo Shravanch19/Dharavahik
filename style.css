@@ -79,6 +79,55 @@ main{
     border: 2px solid black;
 }
 
+.tiles{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    background-color: #CDE8E5;
+    margin-left: 140px;
+    margin-top: 20px;
+    border-radius: 5%;
+    justify-content: space-evenly;
+}
+.Tile{
+    width: 240px;
+    height: 260px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#stimg{
+    width: 230px;
+    height: 250px;
+    background-size: cover;
+    background-image: url("DBMS.png");
+    border-radius: 14%;
+}
+
+#ndimg{
+    width: 230px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("CN.png");
+    border-radius: 14%;
+}
+
+#rdimg{
+    width: 230px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("Git.png");
+    border-radius: 14%;
+}
+
+.tileWord{
+    text-decoration: none;
+    font-size: x-large;
+    color:black;
+}
+
 footer{
     background-color: #222831;
     height: 60px;
