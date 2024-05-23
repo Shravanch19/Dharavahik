@@ -1,185 +1,218 @@
-*{
-    padding:0;
-    margin: 0px;
-    border: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
 }
-header{
-    width: 100%;
-    height: 80px;
-    background-color: #7AB2B2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.headimg{
-    height: 78px;
-    width:120px;
-    margin-left: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all;
-}
-.border{
-    border:1.5px solid transparent;
-}
-.border:hover{
-    border:1.5px solid white;
-}
-#headLine{
-    justify-self: center;
-    color: beige;
-    font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-color: bisque;
-    font-size: 250%;
-}
-.headSearch{
-    display:flex;
-    align-self:last baseline;
-    padding-right: 0.5%;
-    margin-bottom: 4px;
-    height: 25px;
-}
-#headInput{
-    padding: 0%;
-    margin: 0%;
-    border-radius: 6px;
-}
-#headbutton{
-    padding-left: 0;
-    margin-left: 0;
-    border-radius: 2px solid black;
-    border-radius: 4px;
-    width: 20px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
 }
 
-main{
-    padding-top: 10px;
-    text-align: center;
-    background-color: #EEF7FF;
-    height: 800px;
+header {
+    align-items: center;
+    background: linear-gradient(to right, #15F5BA, #56CCF2);
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
 }
-.mainSearch{
-    margin-top: 10px;
+
+
+.navLink {
+    color: white;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.navLink:hover, .navLink:focus {
+    color: #FFB534;
+    transition: color 0.3s;
+}
+
+#headLine {
+    color: white;
+    font-size: 250%;
+    font-weight: bolder;
+    text-shadow: 2px 2px #211951;
+}
+
+.HeadContainer a {
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.HeadContainer a:hover, .HeadContainer a:focus {
+    background-color: #211951;
+    color: white;
+}
+
+.headSearch {
+    align-items: center;
+    display: flex;
+}
+
+#headInput {
+    border-radius: 6px;
+    padding: 5px;
+    width: 200px;
+}
+
+#headbutton {
+    background-color: #56CCF2;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#headbutton:hover, #headbutton:focus {
+    background-color: #15F5BA;
+    transition: background-color 0.3s;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#mainHead {
+    animation: fadeIn 2s ease-in-out;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainSearch {
+    animation: slideUp 1.5s ease-out;
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
-#mainSearchbox{
-    width: 50%;
-    height: 40px;
+
+#mainSearchbox {
+    border: 2px solid #ccc;
     border-radius: 8px;
+    height: 40px;
+    padding: 5px;
+    width: 50%;
 }
-#mainSearchButton{
-    height: 44px;
+
+#mainSearchButton {
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 42px;
     margin-left: 1px;
     width: 4%;
-    background-color: #CDE8E5;
-    border-radius: 8px;
-    border: 2px solid black;
 }
 
-.tiles{
+.tiles {
+    background-color: #A3E4D7;
     display: flex;
-    width: 80%;
     height: 500px;
-    background-color: #CDE8E5;
-    margin-left: 140px;
-    margin-top: 20px;
-    border-radius: 5%;
     justify-content: space-evenly;
-}
-.Tile{
-    width: 240px;
-    height: 260px;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 10%;
+    margin-top: 30px;
+    width: 80%;
 }
 
-#stimg{
-    width: 230px;
+.TileImg {
+    border-radius: 10%;
     height: 250px;
-    background-size: cover;
-    background-image: url("DBMS.png");
-    border-radius: 14%;
-}
-
-#ndimg{
+    margin-top: 10px;
+    transition: opacity 0.3s;
     width: 230px;
-    height: 250px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("CN.png");
-    border-radius: 14%;
 }
 
-#rdimg{
-    width: 230px;
-    height: 250px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("Git.png");
-    border-radius: 14%;
+.TileText {
+    padding-top: 15px;
 }
 
-.tileWord{
+.TileLink {
+    color: inherit;
+    display: block;
+    text-align: center;
     text-decoration: none;
-    font-size: x-large;
-    color:black;
 }
 
-footer{
+.Tile {
+    height: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 235px;
+}
+
+.Tile:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.Tile:hover .TileImg {
+    opacity: 0.8;
+}
+
+footer {
+    animation: fadeInUp 2s ease-in-out;
     background-color: #222831;
+    color: white;
     height: 60px;
-    color:white;
+    line-height: 60px;
+    text-align: center;
 }
 
+button, a {
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
 
+button:hover, a:hover, button:focus, a:focus {
+    transform: scale(1.05);
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-@media only screen and (max-width : 700px) {
-    #headLine{
-        font-size:large;
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
     }
-    #headInput{
-        width:100px;
-    }
-    #HeadButton{
-        height: 25px;
-        width: 30px;
-    }
-    #headimg{
-        height: 50%;
-        margin-right: 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-@media only screen and (max-width : 380px) {
-    header{
-        height: 70px;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    #headLine{
-        font-size:100%;
+    to {
+        opacity: 1;
     }
-    #headInput{
-        width:80px;
-        border: none;
-        padding: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
-    #Headbutton{
-        height: 25px;
-        width: 30px;
-        border: none;
-        padding: 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    #headimg{
-        height: 50%;
-        margin-right: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
     }
-    H1{
-        font-size: small;
-    }
-    #mainSearchbox{
-        width: 40%;
-        height: 10px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
