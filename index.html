@@ -3,70 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ChalChitra</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        
-        <span id = "headLine"> ChalChitra </span>
-        <div class="HeadContainer">
-            <a href="index.html" id="HeadHome" class="navLink">Home</a>
-            <a id="HeadMenu" class="navLink">Menu</a>
-            <a id="HeadAbout" class="navLink">About</a>
-            <a id="Login" class="navLink">Login</a>
-
+        <div class="logo">
+            <h1>ChalChitra</h1>
         </div>
-        <div class = "headSearch">
-            <input placeholder="  Search" id="headInput">
-            <button id = "headbutton"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-        </div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="index.html" class="navLink">Home</a></li>
+                <li><a href="#" class="navLink">Menu</a></li>
+                <li><a href="#" class="navLink">About</a></li>
+                <li><a href="#" class="navLink">Login</a></li>
+            </ul>
+            <div class="headSearch">
+                <input type="text" placeholder="Search" id="headInput">
+                <button id="headbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <button id="darkModeToggle"><i class="fa-solid fa-moon"></i></button>
+        </nav>
     </header>
 
     <main>
-        <H1 id="mainHead">All Your Imagination Here</H1>
-        <div class = "mainSearch">
-            <input placeholder="  Search here...." id="mainSearchbox">
-            <button id="mainSearchButton"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
-        </div>
+        <section class="hero">
+            <h1 id="mainHead">All Your Imagination Here</h1>
+            <div class="mainSearch">
+                <input type="text" placeholder="Search here..." id="mainSearchbox">
+                <button id="mainSearchButton"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+            </div>
+        </section>
 
-        <div class="tiles">
-
+        <section class="tiles">
             <div class="Tile">
                 <a href="https://archive.org/download/copy-of-www.mytwistapp.com-chhichhore-2019-hindi-720p/copy-of-www.mytwistapp.com-chhichhore-2019-hindi-720p_archive.torrent" class="TileLink">
-                    <img src="Chhichhore.jpg" class="TileImg" alt="Image 1">
-                    <div class="TileWord">Chhichhore</div>
+                    <img src="Chhichhore.jpg" alt="Tile Image" class="TileImg">
+                    <p class="TileText">Chhichhore</p>
                 </a>
             </div>
             <div class="Tile">
                 <a href="https://www7.yts.nz/torrent/download/F05FB1B5E23FBF98183958DA6D66EF87DB4D1A62" class="TileLink">
-                    <img src="Idiots.jpg" class="TileImg" alt="Image 2">
-                    <div class="TileWord">3 Idiots</div>
+                    <img src="Idiots.jpg" alt="Tile Image" class="TileImg">
+                    <p class="TileText">3 Idiots</p>
                 </a>
             </div>
-
             <div class="Tile">
                 <a href="https://www7.yts.nz/torrent/download/A51DB4C0FE13180E0EC3A17C07F0D6EA88A67914" class="TileLink">
-                    <img src="ZNMD.jpg" class="TileImg" alt="Image 3">
-                    <div class="TileWord">Zindagi Na Milegi Doobara</div>
+                    <img src="ZNMD.jpg" alt="Tile Image" class="TileImg">
+                    <p class="TileText">Zindagi Na Milegi Dobara</p>
                 </a>
             </div>
-
-        </div>
-
-        </div>
-        
-        <div id = "extra"></div>
+            <!-- Add more tiles as needed -->
+        </section>
     </main>
 
-    <footer> contact : skcchat1908@gmail.com 
+    <footer>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
+        <p>&copy; 2024 ChalChitra. All rights reserved.</p>
     </footer>
-    
+
+    <script src="app.js"></script>
 </body>
 </html>
