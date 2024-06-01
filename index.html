@@ -3,71 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChalChitra</title>
+    <title>Homepage - ChalChitra</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>ChalChitra</h1>
+            <a href="#">
+                <img src="Photos/logo.png" alt="ChalChitra Logo" class="logo-img">
+            </a>
         </div>
-        <nav>
-            <ul class="navLinks">
-                <li><a href="index.html" class="navLink">Home</a></li>
-                <li><a href="#" class="navLink">Menu</a></li>
-                <li><a href="#" class="navLink">About</a></li>
-                <li><a href="#" class="navLink">Login</a></li>
-            </ul>
-            <div class="headSearch">
-                <input type="text" placeholder="Search" id="headInput">
-                <button id="headbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="nav-pane">
+            <div class="nav-panel">
+                <a href="index.html" class="navLink">Home</a>
+                <a href="#" class="navLink">Menu</a>
+                <a href="#" class="navLink">About</a>
+                <a href="#" class="navLink">Login</a>
             </div>
-            <button id="darkModeToggle"><i class="fa-solid fa-moon"></i></button>
-        </nav>
+            <div class="navbox">
+                <input type="text" placeholder="    Search" id="headInput">
+                <button id="headbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="darkModeToggle"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </div>
     </header>
-
     <main>
         <section class="hero">
-            <h1 id="mainHead">All Your Imagination Here</h1>
-            <div class="mainSearch">
-                <input type="text" placeholder="Search here..." id="mainSearchbox">
-                <button id="mainSearchButton"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+            <div class="hero-main">
+                <h1 id="mainHead">All Your Imagination Here</h1>
+                <div class="mainSearch">
+                    <input type="text" placeholder="   Search here..." id="mainSearchBox">
+                    <button id="mainSearchButton"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button></div>
             </div>
         </section>
-
         <section class="tiles">
             <div class="Tile">
-                <a href="https://archive.org/download/copy-of-www.mytwistapp.com-chhichhore-2019-hindi-720p/copy-of-www.mytwistapp.com-chhichhore-2019-hindi-720p_archive.torrent" class="TileLink">
-                    <img src="Chhichhore.jpg" alt="Tile Image" class="TileImg">
+                <a href="Chhichhore/chhichhore.html" class="TileLink" target="_blank">
+                    <img src="Photos/Chhichhore.jpg" alt="Tile Image" class="TileImg">
                     <p class="TileText">Chhichhore</p>
                 </a>
             </div>
             <div class="Tile">
-                <a href="https://www7.yts.nz/torrent/download/F05FB1B5E23FBF98183958DA6D66EF87DB4D1A62" class="TileLink">
-                    <img src="Idiots.jpg" alt="Tile Image" class="TileImg">
+                <a href="#" class="TileLink">
+                    <img src="Photos/Idiots.jpg" alt="Tile Image" class="TileImg">
                     <p class="TileText">3 Idiots</p>
                 </a>
             </div>
             <div class="Tile">
-                <a href="https://www7.yts.nz/torrent/download/A51DB4C0FE13180E0EC3A17C07F0D6EA88A67914" class="TileLink">
-                    <img src="ZNMD.jpg" alt="Tile Image" class="TileImg">
+                <a href="#" class="TileLink">
+                    <img src="Photos/ZNMD.jpg" alt="Tile Image" class="TileImg">
                     <p class="TileText">Zindagi Na Milegi Dobara</p>
                 </a>
             </div>
             <!-- Add more tiles as needed -->
         </section>
     </main>
-
     <footer>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2024 ChalChitra. All rights reserved.</p>
+        <p id="last-line">&copy; 2024 ChalChitra. All rights reserved.</p>
     </footer>
-
     <script src="app.js"></script>
 </body>
 </html>
