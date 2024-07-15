@@ -6,7 +6,9 @@ const page = () => {
   return (
     <div>
       <Full_Header />
-      <Movie_Page />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Movie_Page />
+      </Suspense>
     </div>
   )
 }
