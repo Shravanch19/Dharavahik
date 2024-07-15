@@ -1,3 +1,5 @@
+"use client";
+import React, { Suspense } from 'react';
 import House from "@/components/House/House";
 import SearchBar from "@/components/SearchBar";
 
@@ -12,7 +14,9 @@ const Page = () => {
       </header>
 
       <main className="py-4">
-        <House />
+        <Suspense fallback={<div>Loading...</div>}>
+          <House />
+        </Suspense>
       </main>
     </div>
   );
