@@ -1,6 +1,5 @@
-import Header from "@/components/Header.js";
-import Homepg from "@/components/Homepg.js";
-
+import Header from "@/components/Home_pg/Header";
+import Homepg from "@/components/Home_pg/Homepg";
 export default function Home() {
   return (
     <div>

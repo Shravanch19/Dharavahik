@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "sass": "^1.77.6",
     "selenium-webdriver": "^4.22.0"
   },
   "devDependencies": {

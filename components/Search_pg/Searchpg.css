@@ -1,0 +1,26 @@
+.loading_screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    background-color: rgb(17 24 39);
+}
+
+.loading {
+    width: 60px;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side, #000 90%, #0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+}
+
+@keyframes l1 {
+    to {
+        clip-path: inset(0 -34% 0 0)
+    }
+}
+
+.movies_container {
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(43, 41, 41) 90.2%);
+}

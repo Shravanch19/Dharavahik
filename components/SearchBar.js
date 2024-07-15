@@ -16,10 +16,10 @@ const SearchBar = () => {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="p-2 w-[15vw] rounded-l-lg text-black"
+                className="sm:p-2 sm:text-base text-sm p-1 w-[20vw] rounded-l-lg text-black"
                 placeholder="   Search..."
             />
-            <button type="submit" className="search-icon p-3 bg-white rounded-r-md text-black font-semibold">
+            <button type="submit" className="search-icon sm:p-3 p-1.5 bg-white rounded-r-md text-black font-semibold">
                 <IoSearchOutline />
             </button>
         </form>

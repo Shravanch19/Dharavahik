@@ -1,5 +1,5 @@
 import Full_Header from "@/components/Full_Header"
-import SearchPG from "@/components/SearchPG"
+import SearchPG from "@/components/Search_pg/SearchPG"
 
 const page = () => {
   return (
