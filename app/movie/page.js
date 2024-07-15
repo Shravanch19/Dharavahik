@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react';
 import Full_Header from '@/components/Full_Header'
 import Movie_Page from '@/components/Movie_pg/Movie_Page'
 
