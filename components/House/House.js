@@ -70,7 +70,8 @@ const House = () => {
                                     name={movie.name}
                                     IMDB_Rating={movie.IMDB_Rating}
                                     year={movie.year}
-                                    _id={movie._id}
+                                    ID={movie.ID}
+
                                 />
                             ))}
                         </div>
