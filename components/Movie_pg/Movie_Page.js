@@ -117,10 +117,11 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://vidsrc.me/embed/tv?tmdb=${ID}&season=${season}&episode=${episode}`}
-                                style={{ width: "100%", height: "600px" }}
+                                style={{ width: "100%", height: "calc(100vh - 56px)" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"
+                                allow='autoplay; fullscreen'
                                 allowFullScreen
                             ></iframe>
                         </div>

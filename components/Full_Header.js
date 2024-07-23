@@ -2,7 +2,6 @@
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 import Modal from "./Modal";
-import Link from "next/link";
 
 const Full_Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -41,9 +40,9 @@ const Full_Header = () => {
     return (
         <div className='Nav bg-background text-textPrimary flex justify-between items-center sm:w-[98.75vw] w-[100vw] h-[10vh] border-b border-highlight '>
             <div className='logo'>
-                <Link href="/">
+                <a href="/">
                     <h1 className='sm:text-3xl text-sm font-bold ml-3'>Dharavahik</h1>
-                </Link>
+                </a>
             </div>
             <button
                 onClick={() => setShowModal(true)}
