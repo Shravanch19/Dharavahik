@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { IoSearchOutline } from 'react-icons/io5'
 import { useRouter } from 'next/navigation';
+// import './SearchBar.css';
 const SearchBar = () => {
     const [query, setQuery] = useState('');
     const router = useRouter();

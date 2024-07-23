@@ -1,4 +1,6 @@
 import React from 'react';
+import './Houses.css';
+import Link from 'next/link';
 
 const Houses = () => {
     let imgs = [
@@ -8,22 +10,21 @@ const Houses = () => {
         { house: "disney", img: "https://e1.pxfuel.com/desktop-wallpaper/363/253/desktop-wallpaper-disney-logo-top-46-disney-logo-backgrounds-nice-logo-disney.jpg" },
     ]
     return (
-        <div className='Houses flex justify-evenly sm:gap-6 gap-3 z-10 sm:my-12 my-8'>
+        <div className='Houses z-10 flex justify-evenly gap-4 sm:gap-6'>
             {imgs.map((img, index) => (
                 <div
                     key={index}
-                    className='House border border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-lg overflow-hidden sm:h-[30vh] sm:w-[22vw] h-[12vh] w-[20vw]'>
-                    <a href={`/House?house=${img.house}`}>
+                    className='House'>
+                    <Link href={`/House?house=${img.house}`}>
                         <img
                             src={img.img}
                             alt={img.house}
-                            className='House_img w-full h-full object-cover hover:scale-110 transition-transform duration-500 ease-in-out'
+                            className='House_img'
                         />
-                    </a>
+                    </Link>
                 </div>
             ))}
         </div>
-
     );
 }
 

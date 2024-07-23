@@ -1,6 +1,7 @@
 import './Sliding.css';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const Sliding_panel = ({ movies, title }) => {
     const cardContainerRef = useRef(null);
@@ -31,9 +32,9 @@ const Sliding_panel = ({ movies, title }) => {
                 <div className="card-container flex sm:gap-8 gap-4 overflow-x-scroll no-scrollbar" ref={cardContainerRef}>
                     {movies.map((movie) => (
                         <div key={movie.name} className="card rounded-md overflow-hidden relative transition-transform duration-300 hover:scale-105">
-                            <a href={`/movie?query=${movie.ID}`} className="card-link">
+                            <Link href={`/movie?query=${movie.ID}`} className="card-link">
                                 <img src={movie.poster} alt="Movie Poster" className="card__img" />
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

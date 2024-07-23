@@ -12,10 +12,10 @@
 
 .stars {
     position: absolute;
-    top: 23%;
+    top: 19%;
     left: 40%;
     width: 80%;
-    height: 70%;
+    height: 100%;
     transform: rotate(-45deg);
     overflow-y:hidden;
     overflow-x: hidden;
@@ -23,12 +23,12 @@
 
 
     .star {
-        $star-count: 50;
+        $star-count: 70;
         --star-color: rgb(0, 132, 255);
         --star-tail-length: 6em;
         --star-tail-height: 2px;
         --star-width: calc(var(--star-tail-length) / 6);
-        --fall-duration: 9s;
+        --fall-duration: 13s;
         --tail-fade-duration: var(--fall-duration);
 
         position: absolute;

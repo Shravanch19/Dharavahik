@@ -17,11 +17,12 @@ const Modal = ({ show, onClose, onSubmit }) => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20">
             <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl mb-4">Enter Movie Name</h2>
+                <p className='text-red-500 text-sm'>Caution! : Only use when movie is not available in database</p>
                 <input
                     type="text"
                     value={movieName}
                     onChange={(e) => setMovieName(e.target.value)}
-                    className="w-full p-2 mb-4 bg-gray-700 text-white rounded"
+                    className="w-full p-2 mb-4 mt-3 bg-gray-700 text-white rounded"
                 />
                 <div className="flex items-center mb-4">
                     <input

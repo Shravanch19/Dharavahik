@@ -2,6 +2,7 @@
 import SearchBar from "../SearchBar"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Header = () => {
     const hero_img = [
@@ -34,15 +35,15 @@ const Header = () => {
             {/* Navbar */}
             <div className='Nav bg-background text-textPrimary flex justify-between items-center w-[80vw] h-18 p-4 absolute top-4 left-[50%] transform -translate-x-[50%] rounded-xl border border-highlight z-10'>
                 <div className='logo'>
-                    <a href="/">
+                    <Link href="/">
                         <h1 className='sm:text-3xl text-sm font-bold'>Dharavahik</h1>
-                    </a>
+                    </Link>
                 </div>
                 <SearchBar />
             </div>
 
             {/* Hero Image */}
-            <div className="sm:h-[90vh] h-[60vh] sm:w-[98.75vw] w-[100vw] overflow-hidden relative">
+            <div className="sm:h-[90vh] h-[50vh] sm:w-[98.75vw] w-[100vw] overflow-hidden relative">
                 <img src={hero_img[hero]} alt="Hero Image" className="w-full h-full object-cover transition-opacity duration-1000" />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>

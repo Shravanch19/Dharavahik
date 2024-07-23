@@ -48,8 +48,8 @@ const House = () => {
     return (
         <div className="bg-gray-900 text-white min-h-screen">
             {loading ? (
-                <div className="loading_screen flex items-center justify-center h-full">
-                    <div className="loading"></div>
+                <div className='loading-screen'>
+                    <div className='loading'></div>
                 </div>
             ) : (
                 <>
@@ -62,7 +62,7 @@ const House = () => {
                     </div>
                     <div className="mx-auto max-w-screen-xl px-4 pb-4">
                         <h1 className="text-2xl md:text-3xl font-bold mt-4">Movies</h1>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                             {data?.response?.map((movie, index) => (
                                 <Cards
                                     key={index}

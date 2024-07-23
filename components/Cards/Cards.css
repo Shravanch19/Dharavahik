@@ -1,68 +1,71 @@
 .card {
-    --blur: 16px;
-    --size: clamp(300px, 50vmin, 600px);
-    width: var(--size);
-    aspect-ratio: 4 / 3;
-    position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
-    color: #000;
-    transform: translateZ(0);
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: #000;
+  transform: translateZ(0);
 }
 
 .card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
-    transition: transform 0.2s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
 }
 
 .card__footer {
-    padding: 0 1.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: red;
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 0.5ch;
-    background: hsl(0 0% 100% / 0.5);
-    backdrop-filter: blur(var(--blur));
-    height: 30%;
-    align-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0.5rem 1rem;
 }
 
 .card__action {
-    position: absolute;
-    aspect-ratio: 1;
-    width: calc(var(--size) * 0.15);
-    bottom: 30%;
-    right: 1.5rem;
-    transform: translateY(50%) translateY(calc((var(--size) * 0.4))) translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
-    background: purple;
-    display: grid;
-    place-items: center;
-    border-radius: 0.5rem;
-    background: hsl(0 0% 100% / 0.5);
-    /*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
-    transition: transform 0.2s;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .card__action svg {
-    aspect-ratio: 1;
-    width: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.card__footer span:nth-of-type(1) {
-    font-size: calc(var(--size) * 0.065);
+.card:hover .card__img {
+  transform: scale(1.05);
 }
 
-.card__footer span:nth-of-type(2) {
-    font-size: calc(var(--size) * 0.035);
-}
+@media screen and (max-width: 640px) {
 
-.card:is(:hover, :focus-visible) {
-    --hover: 1;
+  .card__footer {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    
+  }
+
+  .card__action {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .card__action svg {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 }
