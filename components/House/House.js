@@ -68,7 +68,6 @@ const House = () => {
                                     key={index}
                                     poster={movie.poster}
                                     name={movie.name}
-                                    IMDB_Rating={movie.IMDB_Rating}
                                     year={movie.year}
                                     ID={movie.ID}
 

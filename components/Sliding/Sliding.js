@@ -23,8 +23,8 @@ const Sliding_panel = ({ movies, title }) => {
     };
 
     return (
-        <div className="panel mx-auto w-[95vw] sm:my-6 my-1 sm:p-5 p-1">
-            <h2 className="panel-title text-white text-2xl mb-3 font-bold ml-5">{title}</h2>
+        <div className="panel mx-auto w-[95vw] sm:my-6 mt-4 sm:p-5 p-1">
+            <h2 className="panel-title text-white text-sm sm:text-2xl mb-2 sm:mb-4 font-bold sm:ml-2">{title}</h2>
             <div className="relative">
                 <button className="scroll-button left-0" onClick={scrollLeft}>
                     <FaAngleLeft />

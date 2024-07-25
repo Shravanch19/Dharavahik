@@ -36,7 +36,7 @@ const SearchPG = () => {
         , [searchParams]);
 
     return (
-        <div className="container mx-auto px-8 py-6 bg-gray-900 text-white">
+        <div className="container mx-auto px-8 py-6 bg-gray-900 text-white min-h-[90vh]">
             <h1 className="text-2xl mb-4 font-bold text-gray-100">Search Results</h1>
             {loading ? (
                 <div className='loading_screen'><div className='loading'></div></div>
@@ -54,7 +54,6 @@ const SearchPG = () => {
                                 key={index}
                                 poster={movie.poster}
                                 name={movie.name}
-                                IMDB_Rating={movie.IMDB_Rating}
                                 year={movie.year}
                                 ID={movie.ID}
                             />

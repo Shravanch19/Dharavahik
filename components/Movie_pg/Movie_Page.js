@@ -104,7 +104,7 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://vidsrc.me/embed/movie?tmdb=${ID}`}
-                                style={{ width: "100%", height: "600px" }}
+                                style={{ width: "100%", height: "calc(100vh - 56px)" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"
