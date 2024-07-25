@@ -104,7 +104,7 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://vidsrc.me/embed/movie?tmdb=${ID}`}
-                                style={{ width: "100%", height: "sm:60vh 30vh" }}
+                                style={{ width: "100%", height: "sm:60vh 15vh" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"
@@ -117,7 +117,7 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://vidsrc.me/embed/tv?tmdb=${ID}&season=${season}&episode=${episode}`}
-                                style={{ width: "100%", height: "sm:60vh 30vh" }}
+                                style={{ width: "100%", height: "sm:60vh 15vh" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"
