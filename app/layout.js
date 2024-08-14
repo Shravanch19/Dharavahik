@@ -3,6 +3,8 @@ import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react"
+import Head from "next/head";
+import Link from "next/link";
 
 export const metadata = {
   title: "Dharavahik",
@@ -11,12 +13,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Analytics />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Head>
+        <Link rel="icon" href="/favicon.ico" />
+      </Head>
+      <html lang="en">
+        <body className={inter.className}>
+          <Analytics />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </>
   );
 }
