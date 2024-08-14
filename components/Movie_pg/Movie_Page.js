@@ -109,6 +109,7 @@ const Movie_Page = () => {
                                 referrerPolicy="origin"
                                 loading="lazy"
                                 allowFullScreen
+                                sandbox="allow-scripts allow-same-origin"
                             ></iframe>
                         </div>
                     )}
@@ -123,6 +124,7 @@ const Movie_Page = () => {
                                 loading="lazy"
                                 allow='autoplay; fullscreen'
                                 allowFullScreen
+                                sandbox="allow-scripts allow-same-origin"
                             ></iframe>
                         </div>
                     )}
