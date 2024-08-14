@@ -2,7 +2,6 @@
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 import Modal from "./Modal";
-import logo from "../public/logo.png";
 
 const Full_Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -42,7 +41,7 @@ const Full_Header = () => {
         <div className='Nav bg-background text-textPrimary flex justify-between items-center sm:w-[98.75vw] w-[100vw] h-[10vh] border-b border-highlight '>
             <div className='logo'>
                 <a href="/">
-                    <img src={logo} />
+                    <img src="/logo.png" alt="Logo" className="w-12 p-0 m-4" />
                 </a>
             </div>
             <button
