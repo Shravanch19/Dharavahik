@@ -38,20 +38,20 @@ const Full_Header = () => {
     };
 
     return (
-        <div className='Nav bg-background text-textPrimary flex justify-between items-center sm:w-[98.75vw] w-[100vw] h-[10vh] border-b border-highlight '>
-            <div className='logo'>
+        <div className='Nav bg-black text-textPrimary flex justify-between items-center sm:w-[98.75vw] w-[100vw] h-[10vh] border-b border-highlight '>
+            <div className='logo md:ml-9 ml-5'>
                 <a href="/">
-                    <img src="/logo.png" alt="Logo" className="w-12 p-0 m-4" />
+                    <img src="/logo.png" alt="Logo" className="w-12 p-0" />
                 </a>
             </div>
             <button
                 onClick={() => setShowModal(true)}
-                className="flex items-center bg-blue-500 hover:bg-blue-700 text-white sm:font-bold sm:text-base py-2 px-4 rounded"
+                className="flex items-center bg-blue-500 hover:bg-blue-700 text-white sm:font-bold sm:text-base py-2 px-4 rounded md:ml-28 ml-5"
             >
                 <img src="https://cdn.vectorstock.com/i/1000v/77/36/artificial-intelligence-ai-icon-vector-23097736.jpg" alt="AI" className="w-5 h-5 mr-2" />
                 AI
             </button>
-            <SearchBar />
+            <SearchBar/>
             <Modal show={showModal} onClose={handleModalClose} onSubmit={handleMovieSubmit} />
         </div>
     );

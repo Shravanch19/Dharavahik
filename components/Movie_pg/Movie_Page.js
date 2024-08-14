@@ -104,7 +104,7 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://www.NontonGo.win/embed/movie/${ID}`}
-                                style={{ width: "100%", height: "sm:60vh 15vh" }}
+                                style={{ width: "100%", height: "sm:60vh 10vh" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"
@@ -117,7 +117,7 @@ const Movie_Page = () => {
                             <h2>Watch Here</h2>
                             <iframe
                                 src={`https://www.NontonGo.win/embed/tv/${ID}/${season}/${episode}`}
-                                style={{ width: "100%", height: "sm:60vh 15vh" }}
+                                style={{ width: "100%", height: "sm:60vh 10vh" }}
                                 frameBorder="0"
                                 referrerPolicy="origin"
                                 loading="lazy"

@@ -37,7 +37,7 @@ const SearchPG = () => {
 
     return (
         <div className="container mx-auto px-8 py-6 bg-gray-900 text-white sm:min-h-[90vh] min-h-[60vh] ">
-            <h1 className="text-2xl mb-4 font-bold text-gray-100">Search Results</h1>
+            <h1 className="text-center text-2xl mb-4 font-bold text-gray-100">Search Results</h1>
             {loading ? (
                 <div className='loading_screen'><div className='loading'></div></div>
             ) : (
