@@ -35,7 +35,7 @@ const Header = () => {
             <div className='Nav bg-black text-textPrimary flex justify-between items-center w-[80vw] h-18 p-2 absolute top-4 left-[50%] transform -translate-x-[50%] rounded-xl border border-highlight z-10'>
                 <div className='logo'>
                     <a href="/">
-                        <img src="/logo.png" alt="Logo" className="w-20 p-0 md:ml-5" />
+                        <img src="/logo.png" alt="Logo" className="md:w-20 w-14 p-0 md:ml-5" />
                     </a>
                 </div>
                 <div className='logo-t md:ml-28 hidden md:inline'>
