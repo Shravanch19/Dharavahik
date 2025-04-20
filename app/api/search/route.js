@@ -1,6 +1,32 @@
 import { find } from "@/lib/Mongo.js";
-export async function GET(req) {
-  const name = await req.nextUrl.searchParams.get("query"); 
-  const movieDetails = await find(name);
-  return new Response(JSON.stringify({ response : movieDetails }));
+import { NextResponse } from 'next/server';
+
+export async function GET(request) {
+  try {
+    const searchParams = request.nextUrl.searchParams;
+    const query = searchParams.get("query");
+
+    if (!query) {
+      return NextResponse.json(
+        { response: [] },
+        { status: 200 }
+      );
+    }
+
+    const movieDetails = await find(query);
+    
+    return NextResponse.json({
+      response: movieDetails || []
+    });
+
+  } catch (error) {
+    console.error("Search API Error:", error);
+    return NextResponse.json(
+      { 
+        response: [],
+        error: error.message 
+      },
+      { status: 500 }
+    );
+  }
 }

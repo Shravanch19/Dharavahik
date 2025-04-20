@@ -12,17 +12,25 @@ const SearchBar = () => {
         router.push(`/search?query=${query}`);
     };
     return (
-        <form onSubmit={handleSearch} className="search flex items-center justify-evenly mr-3">
-            <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                className="sm:p-2 sm:text-base text-sm p-1 w-[20vw] rounded-l-lg text-black"
-                placeholder="   Search..."
-            />
-            <button type="submit" className="search-icon sm:p-3 p-1.5 bg-white rounded-r-md text-black font-semibold">
-                <IoSearchOutline />
-            </button>
+        <form onSubmit={handleSearch} className="relative">
+            <div className="relative flex items-center">
+                <input
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    className="w-[20vw] py-2.5 pl-4 pr-12 text-sm sm:text-base bg-white/10 border border-white/20 rounded-lg 
+                             text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                             focus:border-transparent transition-all duration-300"
+                    placeholder="Search movies, TV shows..."
+                />
+                <button 
+                    type="submit" 
+                    className="absolute right-0 p-2 text-gray-400 hover:text-white transition-colors duration-300"
+                    aria-label="Search"
+                >
+                    <IoSearchOutline className="w-5 h-5" />
+                </button>
+            </div>
         </form>
     )
 }

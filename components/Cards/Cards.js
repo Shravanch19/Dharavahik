@@ -1,16 +1,36 @@
 import { useSearchParams } from 'next/navigation';
-import './Cards.css';
 import Link from 'next/link';
 
 const Cards = (props) => {
   const searchParams = useSearchParams();
   return (
-    <div className="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 mt-3">
-      <Link href={`/movie?query=${props.ID}`}>
-        <img src={props.poster} alt="Movie Poster" className="card__img w-full h-full object-cover" />
-        <div className="card__footer flex justify-between items-center p-4 bg-gray-800 text-white">
-          <span>{props.name}</span>
-          <span>{props.year}</span>
+    <div className="w-full max-w-full aspect-[2/3] relative rounded-2xl overflow-hidden bg-[#1a1a1a] shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl group">
+      <Link href={`/movie?query=${props.ID}`} className="block h-full">
+        <div className="relative h-full">
+          <img 
+            src={props.poster} 
+            alt={`${props.name} Poster`} 
+            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+            <div className="absolute top-4 right-4 bg-black/75 px-3 py-2 rounded-full flex items-center gap-2 text-white font-semibold -translate-y-2.5 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+              <span className="text-yellow-400">⭐</span>
+              <span>{props.rating || 'N/A'}</span>
+            </div>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xl font-bold leading-tight m-0">{props.name}</h3>
+              <div className="flex gap-4 text-sm opacity-80">
+                <span className="inline-flex items-center">{props.year}</span>
+                {props.genre && (
+                  <span className="inline-flex items-center relative pl-4 before:content-['•'] before:absolute before:left-2">
+                    {props.genre}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </Link>
     </div>

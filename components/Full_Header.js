@@ -1,15 +1,8 @@
 "use client"
 import SearchBar from "./SearchBar";
-import { useState } from "react";
-import Modal from "./Modal";
-
 const Full_Header = () => {
-    const [showModal, setShowModal] = useState(false);
-
-    const handleModalClose = () => setShowModal(false);
 
     const handleMovieSubmit = async (movieName, isWebSeries) => {
-        setShowModal(false);
 
         const apiEndpoint = isWebSeries ? '/api/Insert_TV' : '/api/Insert';
 
@@ -38,22 +31,40 @@ const Full_Header = () => {
     };
 
     return (
-        <div className='Nav bg-black text-textPrimary flex justify-between items-center sm:w-[98.75vw] w-[100vw] h-[10vh] border-b border-highlight '>
-            <div className='logo md:ml-9 ml-5'>
-                <a href="/">
-                    <img src="/logo.png" alt="Logo" className="w-12 p-0" />
-                </a>
+        <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-black via-gray-900 to-black text-textPrimary">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16 sm:h-20">
+                    {/* Logo Section */}
+                    <div className="flex items-center space-x-4">
+                        <a href="/" className="flex items-center space-x-2 group">
+                            <img 
+                                src="/logo.png" 
+                                alt="Logo" 
+                                className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110" 
+                            />
+                            <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                                Dharavahik
+                            </span>
+                        </a>
+                    </div>
+
+                    {/* Search Bar Section */}
+                    <div className="flex-1 max-w-2xl mx-8">
+                        <SearchBar />
+                    </div>
+
+                    {/* Right Section - Can be used for additional features */}
+                    <div className="flex items-center space-x-4">
+                        <button 
+                            className="hidden sm:flex items-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-300 text-sm font-medium"
+                            onClick={() => window.location.href = '/'}
+                        >
+                            Home
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button
-                onClick={() => setShowModal(true)}
-                className="flex items-center bg-blue-500 hover:bg-blue-700 text-white sm:font-bold sm:text-base py-2 px-4 rounded md:ml-28 ml-5"
-            >
-                <img src="https://cdn.vectorstock.com/i/1000v/77/36/artificial-intelligence-ai-icon-vector-23097736.jpg" alt="AI" className="w-5 h-5 mr-2" />
-                AI
-            </button>
-            <SearchBar/>
-            <Modal show={showModal} onClose={handleModalClose} onSubmit={handleMovieSubmit} />
-        </div>
+        </header>
     );
 };
 
