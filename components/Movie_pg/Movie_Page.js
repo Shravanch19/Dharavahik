@@ -1,6 +1,7 @@
 "use client"
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Movie_Page = () => {
     const router = useRouter();
@@ -99,12 +100,14 @@ const Movie_Page = () => {
                         ← Go Back
                     </button>
                     <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 mb-8">
-                        <img 
-                            src={data.response[0].poster} 
-                            alt={`${data.response[0].name} Poster`} 
-                            className="w-full rounded-lg shadow-lg"
-                            loading="lazy"
-                        />
+                        <div className="relative w-full aspect-[2/3]">
+                            <Image 
+                                src={data.response[0].poster} 
+                                alt={`${data.response[0].name} Poster`} 
+                                fill
+                                className="rounded-lg shadow-lg object-cover"
+                            />
+                        </div>
                         <div>
                             <h1 className="text-4xl font-bold text-white mb-4">{data.response[0].name}</h1>
                             <div className="flex flex-wrap gap-4 mb-4">

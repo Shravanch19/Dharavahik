@@ -1,4 +1,8 @@
 import { kidsFavoriteMovies_Find, findTopIMDBSeries, findTrendingContent, findPopularMovies} from "@/lib/Mongo.js";
+
+// Mark this route as dynamic to prevent static generation
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
 
   const topFavorite = await findTopIMDBSeries();

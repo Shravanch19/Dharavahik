@@ -69,7 +69,7 @@ const SearchPG = () => {
                 </h1>
                 {searchParams.get('query') && (
                     <p className="text-center text-gray-400">
-                        Showing results for "{searchParams.get('query')}"
+                        Showing results for &quot;{searchParams.get('query')}&quot;
                     </p>
                 )}
             </div>
@@ -83,7 +83,7 @@ const SearchPG = () => {
                     <div className="bg-gray-800 p-8 rounded-lg shadow-lg text-center max-w-md">
                         <h3 className="text-xl font-semibold mb-2">No Results Found</h3>
                         <p className="text-gray-400">
-                            We couldn't find any matches for your search. Try different keywords or browse our categories.
+                            We couldn&apos;t find any matches for your search. Try different keywords or browse our categories.
                         </p>
                     </div>
                 </div>

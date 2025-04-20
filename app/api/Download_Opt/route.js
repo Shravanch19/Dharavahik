@@ -21,6 +21,10 @@ async function fetchTMDBId(movieTitle) {
     console.error('Fetch error:', error);
   }
 }
+
+// Mark this route as dynamic to prevent static generation
+export const dynamic = 'force-dynamic';
+
 export async function GET(req) {
   const name = await req.nextUrl.searchParams.get("query");
   const movieDetails = await fetchTMDBId(name);

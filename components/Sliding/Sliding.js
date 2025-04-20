@@ -1,6 +1,7 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Sliding_panel = ({ movies, title, isLoading = false, error = null }) => {
     const cardContainerRef = useRef(null);
@@ -121,12 +122,12 @@ const Sliding_panel = ({ movies, title, isLoading = false, error = null }) => {
                                     className="no-underline block"
                                     onClick={(e) => handleMovieClick(e, movie.ID)}
                                 >
-                                    <div className="relative">
-                                        <img 
+                                    <div className="relative h-[120px] sm:h-[45vh]">
+                                        <Image 
                                             src={movie.poster} 
                                             alt={`${movie.name} poster`} 
-                                            className="w-full h-[120px] sm:h-[45vh] object-cover bg-no-repeat transition-transform duration-300 group-hover:brightness-75"
-                                            loading="lazy"
+                                            fill
+                                            className="object-cover bg-no-repeat transition-transform duration-300 group-hover:brightness-75"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
                                             <div className="flex items-center gap-2 mb-1">

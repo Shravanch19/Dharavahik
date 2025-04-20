@@ -1,5 +1,7 @@
 "use client"
 import SearchBar from "./SearchBar";
+import Image from 'next/image';
+
 const Full_Header = () => {
 
     const handleMovieSubmit = async (movieName, isWebSeries) => {
@@ -37,9 +39,11 @@ const Full_Header = () => {
                     {/* Logo Section */}
                     <div className="flex items-center space-x-4">
                         <a href="/" className="flex items-center space-x-2 group">
-                            <img 
+                            <Image 
                                 src="/logo.png" 
                                 alt="Logo" 
+                                width={48}
+                                height={48}
                                 className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110" 
                             />
                             <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
