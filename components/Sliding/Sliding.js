@@ -122,7 +122,7 @@ const Sliding_panel = ({ movies, title, isLoading = false, error = null }) => {
                                     className="no-underline block"
                                     onClick={(e) => handleMovieClick(e, movie.ID)}
                                 >
-                                    <div className="relative h-[120px] sm:h-[45vh]">
+                                    <div className="relative h-[120px] sm:h-[45vh] w-[150px] sm:w-[250px]">
                                         <Image 
                                             src={movie.poster} 
                                             alt={`${movie.name} poster`} 
