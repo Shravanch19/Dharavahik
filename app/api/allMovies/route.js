@@ -9,5 +9,6 @@ export async function GET() {
   const kidsFavorite = await kidsFavoriteMovies_Find();
   const trending = await findTrendingContent();
   const popular = await findPopularMovies();
+  const reversepopular = popular.reverse();
   return new Response(JSON.stringify({ topFavorite, kidsFavorite, trending, popular }));
 }

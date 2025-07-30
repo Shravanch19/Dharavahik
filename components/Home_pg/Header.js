@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 const Header = () => {
     const hero_img = [
-        "https://wallpapers.com/images/featured/harry-potter-desktop-vtho1d6dbpcfzv5v.jpg",
+        "https://igimage.indiaglitz.com/telugu/home/mahavathar-narasimha-100725.jpg",
         "https://cdn.marvel.com/content/1x/mi_wallpaper_mas_dsk_01.jpg",
-        "https://images8.alphacoders.com/107/thumb-1920-1073623.jpg",
+        "https://m.media-amazon.com/images/S/pv-target-images/5c2f177a50d038f382e8748f4bcc9a8ae8ccdc530374272ce00428eadbc2d190.jpg",
         "https://wallpaper.dog/large/10785433.jpg"
     ];
 
